@@ -1,0 +1,130 @@
+:root{
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --clr-neutral-1: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-2: hsl(0, 0%, 95%);
+
+  --ff-base: "Lexend Deca", sans-serif;
+  --ff-big-shlouders-diplay: "Big Shoulders Display", system-ui;
+
+  --fw-regular: 400; 
+  --fw-bold: 700; 
+
+  --fs-400: 1rem;
+  --fs-900: 2.6rem;
+
+  --content-padding: 1.5rem;
+  --content-padding-large: 2.5rem;
+}
+
+/* utilities */
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button{
+  font: inherit;
+}
+
+body{
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture{
+  max-width: 100%;
+  display: block;
+}
+
+.clr-orange{
+  color: var(--clr-bright-orange);
+}
+
+.clr-dark-cyan{
+  color: var(--clr-dark-cyan);
+}
+
+.clr-very-dark-cyan{
+  color: var(--clr-very-dark-cyan);
+}
+
+.bg-orange{
+  background-color: var(--clr-bright-orange)
+}
+
+.bg-dark-cyan{
+  background-color: var(--clr-dark-cyan);
+}
+
+.bg-very-dark-cyan{
+  background-color: var(--clr-very-dark-cyan);
+}
+
+body{
+  display: grid;
+  place-content: center;
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-1);
+
+  padding: var(--content-padding);
+}
+
+.wrapper{
+  display: grid;
+  border-radius: 1rem ;
+}
+
+@media(min-width: 50rem){
+  .wrapper{
+    display: flex;
+
+    max-width: 58rem;
+  }
+
+  .product__description{
+    margin-bottom: calc(var(--content-padding)*2.5);
+  }
+
+}
+
+.product{
+  --content-spacing: 2rem;
+  display: grid;
+  gap: var(--content-spacing);
+
+  padding: var(--content-padding-large);
+}
+
+.product__name{
+  font-family: var(--ff-big-shlouders-diplay);
+  font-size: var(--fs-900);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--clr-neutral-2);
+}
+
+.button{
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 2rem;
+  font-weight: var(--fw-bold);
+
+  padding: 0.8rem 1.7rem;
+}
+
+
+
+
